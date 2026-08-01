@@ -13,7 +13,8 @@ class BuyerEntityTypeConfiguration
             .UseHiLo("buyerseq");
 
         buyerConfiguration.Property(b => b.IdentityGuid)
-            .HasMaxLength(200);
+            .HasMaxLength(200)
+            .IsRequired();
 
         buyerConfiguration.HasIndex("IdentityGuid")
             .IsUnique(true);

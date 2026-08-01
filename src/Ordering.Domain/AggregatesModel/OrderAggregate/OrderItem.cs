@@ -1,11 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace eShop.Ordering.Domain.AggregatesModel.OrderAggregate;
+﻿namespace eShop.Ordering.Domain.AggregatesModel.OrderAggregate;
 
 public class OrderItem
     : Entity
 {
-    [Required]
     public string ProductName { get; private set; }
     
     public string PictureUrl { get; private set;}

@@ -1,11 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace eShop.Ordering.Domain.AggregatesModel.BuyerAggregate;
+﻿namespace eShop.Ordering.Domain.AggregatesModel.BuyerAggregate;
 
 public class Buyer
     : Entity, IAggregateRoot
 {
-    [Required]
     public string IdentityGuid { get; private set; }
 
     public string Name { get; private set; }
