@@ -1,15 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace eShop.Ordering.Domain.AggregatesModel.BuyerAggregate;
+﻿namespace eShop.Ordering.Domain.AggregatesModel.BuyerAggregate;
 
 public class PaymentMethod : Entity
 {
-    [Required]
     private string _alias;
-    [Required]
     private string _cardNumber;
     private string _securityNumber;
-    [Required]
     private string _cardHolderName;
     private DateTime _expiration;
 

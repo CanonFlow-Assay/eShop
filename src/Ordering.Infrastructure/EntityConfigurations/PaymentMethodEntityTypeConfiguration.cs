@@ -17,12 +17,14 @@ class PaymentMethodEntityTypeConfiguration
         paymentConfiguration
             .Property("_cardHolderName")
             .HasColumnName("CardHolderName")
-            .HasMaxLength(200);
+            .HasMaxLength(200)
+            .IsRequired();
 
         paymentConfiguration
             .Property("_alias")
             .HasColumnName("Alias")
-            .HasMaxLength(200);
+            .HasMaxLength(200)
+            .IsRequired();
 
         paymentConfiguration
             .Property("_cardNumber")

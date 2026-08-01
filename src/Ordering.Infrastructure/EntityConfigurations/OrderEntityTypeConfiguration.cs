@@ -16,6 +16,10 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
             .OwnsOne(o => o.Address);
 
         orderConfiguration
+            .Navigation(o => o.Address)
+            .IsRequired();
+
+        orderConfiguration
             .Property(o => o.OrderStatus)
             .HasConversion<string>()
             .HasMaxLength(30);

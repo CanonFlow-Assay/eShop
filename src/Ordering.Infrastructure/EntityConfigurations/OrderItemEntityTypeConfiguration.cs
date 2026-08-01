@@ -12,6 +12,9 @@ class OrderItemEntityTypeConfiguration
         orderItemConfiguration.Property(o => o.Id)
             .UseHiLo("orderitemseq");
 
+        orderItemConfiguration.Property(o => o.ProductName)
+            .IsRequired();
+
         orderItemConfiguration.Property<int>("OrderId");
     }
 }
