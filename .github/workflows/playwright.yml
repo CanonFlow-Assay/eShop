@@ -32,6 +32,7 @@ jobs:
     - name: Install .NET HTTPS Development Certificate
       # if: matrix.os == 'ubuntu-latest'
       run: |
+        export SSL_CERT_DIR="$HOME/.aspnet/dev-certs/trust:/usr/lib/ssl/certs"
         dotnet dev-certs https --clean
         dotnet dev-certs https --trust
     - name: Install Playwright Browsers
